@@ -1,0 +1,25 @@
+ALGORITHM Insertion
+PROCEDURE swap( var min , var arr[i])
+   VAR
+    aux : INTEGER;
+   BEGIN
+   aux := min ;
+   min := arr[i];
+   arr[i] := min 
+   END
+VAR
+   arr: ARRAY_OF INTEGER[]; 
+   INTEGER i , j , min ;
+
+BEGIN
+    FOR i FROM 0 TO length(arr)-1 DO
+    min := arr[i];
+    FOR j FROM i+1 TO length(arr)  DO
+    IF (arr[j] < min) THEN
+        min := arr[j]
+    END_IF 
+END_FOR        
+   IF (min > arr[i]) THEN
+   swap(arr[i] ,min)
+   END_IF
+END
